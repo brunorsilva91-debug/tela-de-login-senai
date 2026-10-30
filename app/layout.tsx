@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Next.js Supabase Login",
-  description: "Autenticação integrada ao Supabase",
+  title: "Next.js App Master",
+  description: "Estrutura limpa, moderna e otimizada",
 };
 
 export default function RootLayout({
@@ -12,8 +13,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body style={{ fontFamily: "system-ui, -apple-system, sans-serif", margin: 0, backgroundColor: "#f9fafb" }}>
-        {children}
+      <body>
+        <div class="container">
+          <header class="header">
+            <div class="logo">NextApp.</div>
+            <nav class="nav-links">
+              <a href="/" class="active">Início</a>
+              <a href="/sobre">Sobre</a>
+              <a href="/contato">Contato</a>
+            </nav>
+          </header>
+          {children}
+        </div>
       </body>
     </html>
   );
